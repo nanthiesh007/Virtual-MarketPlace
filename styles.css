@@ -1,0 +1,143 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo-search {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.navbar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #2c3e50;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background: #2c3e50;
+    color: #ffffff;
+}
+
+.search-filter {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#search, #filter {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+#search:focus, #filter:focus {
+    border-color: #2c3e50;
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.product {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 2rem);
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.product h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+}
+
+.product p {
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+
+button {
+    background: #2c3e50;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #1a252f;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .search-filter {
+        margin-top: 1rem;
+    }
+}
